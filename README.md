@@ -1,1 +1,5 @@
 # Blogs
+
+These blogs were written for my pleasure, but I hope you will enjoy them too. The contents came from my own experience and readings. Most of them were reviewed by experts in the respective fields before being published here; however, it is inevitable to convey inaccurate information sometimes. If you have feedback or are interested in exchanging ideas, I am more than happy to hear from you at nga-tran@live.com. <span style="color: red;"> The blogs are aimed to point out trade-offs and issues that are neither available nor discussed deeply enough and throw out some questions and thoughts for future designs. </span> At the beginning of each post, there will be links to the topic's related documents.
+
+**_Distributed Cloud Databases_** is the current focus and [here](https://github.com/NGA-TRAN/Blogs/blob/main/posts.md) are the topics I plan to write. More will be added. If you are interested in specific ones that you think I will be able to provide but are not listed, please email me. Here is [my brief background and experience](https://www.linkedin.com/in/nga-tran-0641183/). Enjoy the readings!

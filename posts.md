@@ -18,5 +18,6 @@
 * Why does column-stored DB need a built-in & auto-run Database Designer?
 * Materialized Views: What are specific use cases for the reight designs?
     * Flattened Tablevs Live Aggregate Projection
+    
 
 # Posted
