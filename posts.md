@@ -1,6 +1,5 @@
 # To be written
 
-* Reading materials for Distributed Cloud Databases.
 * Cloud Columnar Databases: Vertica Eon vs Snowflake.
 * Why are tools for system monitoring and log analysis top priority?
 * Elastic throughput scaling vs elastic crunch scaling. Should we have a design that supports both?
@@ -21,3 +20,5 @@
     
 
 # Posted
+* [Reading Materials for Building Distributed (Cloud) Databases](https://github.com/NGA-TRAN/Blogs/blob/main/readings.md)
+
