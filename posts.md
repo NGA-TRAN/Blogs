@@ -2,8 +2,9 @@
 
 * Cloud Columnar Databases: Vertica Eon vs Snowflake.
 * Why are tools for system monitoring and log analysis top priority?
-* Elastic throughput scaling vs elastic crunch scaling. Should we have a design that supports both?
 * The roles of three major components of a DB: Query Optimizer, Execution Engine, and Storage.
+* Elastic throughput scaling vs elastic crunch scaling. Should we have a design that supports both?
+* Transaction Isolation: Serial Execution vs Two-Phase Locking vs Serialization Snapshot Isolation
 * Storage for availability, scaling, and performance. _Will be discussed in many subtopics_:
     * Segmentation vs Partitioning.
     * Segments vs Shards.
