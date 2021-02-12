@@ -22,12 +22,12 @@ Both companies see the popularity of _semi-structured_ data (e.g. JSON, XML, and
 
 As Cloud DB providers, they continue building and improving their data _security_ features such as authentication, authorization, and encryption in flight and at rest <sup>(*5) and ($1)</sup>.
 
-The ecosystem of both DBs are very diverse including integration with Kafka for data streaming <sup>(*6)</sup>, Spark connector for bring data between their DBs and Spark ecosystem <sup>(*7)</sup>, SDK for different programming languages <sup>(*8)</sup>, driver connectors <sup>(*9)</sup>, and BI integration <sup>(*10)</sup>. I will not dive into their details but these two talks of [Snowflake's Best Practice for Data Engineers](https://www.youtube.com/watch?v=E--zIGd_iqE&feature=youtu.be) and [Vertica's Coolest Features](https://www.youtube.com/watch?v=ezD5we-cens&feature=emb_logo) summarize well those offers.
+The ecosystem of both DBs are very diverse including integration with Kafka for data streaming <sup>(*6)</sup>, Spark connector for bringing data between their DBs and Spark ecosystem <sup>(*7)</sup>, SDK for different programming languages <sup>(*8)</sup>, driver connectors <sup>(*9)</sup>, and BI integration <sup>(*10)</sup>. I will not dive into their details but these two talks of [Snowflake's Best Practice for Data Engineers](https://www.youtube.com/watch?v=E--zIGd_iqE&feature=youtu.be) and [Vertica's Coolest Features](https://www.youtube.com/watch?v=ezD5we-cens&feature=emb_logo) summarize well those offers.
 
 Here are a few key technologies of their internal implementations:
 * ACID transactions are handled via snapshot isolation and MVCC (multi-version concurrency control) in which queries in a transaction only see a snapshot of immutable files of data at the time the transaction started and a copy of every change of metadata or data is preserved for some duration after their commit.
 * Columns are not only stored separately in different files but also sorted and encoded<sup>(3)</sup> which are keys for fast scan and efficient query execution. Furthermore, by partitioning tables horizontally and keeping column partition min and max values, their execution engines know to only scan partitions that include needed data. 
-* Query plans are built and filtered by a cost-based Query Optimizer using statistics of the data.<sup>(*11)</sup>
+* Query plans are built and filtered by a cost-based Query Optimizer using statistics of the data<sup>(*11)</sup>.
 * Queries are executed in vectorized and pipelined fashion to improve cache efficiency and avoid storing intermediate results.
 * Even though most optimizations are performed in Query Optimizer, a few are decided on-the-fly at execution time. 
 * Join SIP (Sideway Information Passing) techniques are implemented to prune unnecessary join data at scan steps, way before the join actually happens<sup>(*12)</sup>.
@@ -54,7 +54,7 @@ Compute is a key component of the cloud DB architecture and both Snowflake and V
 
 [V] As mentioned earlier, Snowflake offers single mode which is a pure Cloud DB implementing the major technology of separation of storage and compute. Its cloud providers include Amazon AWS, MS Azure, and Google Cloud. Vertica, on the other hand, offers three different DB modes:
 1. _**Vertica Eon mode on Cloud**_: this offer is mostly like Snowflake's and the comparisons so far with Snowflake are on this mode. At the time of this writing, this mode only works on Amazon AWS.
-2. _**Vertica Eon mode On-Premise**_: This mode also offers the separation of storage and compute technology like the one above but its compute and storage do not have to be on public clouds. The compute can be any cluster customers choose and the storage can be either Pure Storage FlashBlade, MiIO, and HTFS<sup>(*19)</sup>.
+2. _**Vertica Eon mode On-Premise**_: This mode also offers the separation of storage and compute technology like the one above but its compute and storage do not have to be on public clouds. The compute can be any cluster customers choose and the storage can be either Pure Storage FlashBlade, MiIO, and HDFS<sup>(*19)</sup>.
 3. _**Vertica On-Premise**_: This is the original Shared-Nothing Distributed Data Warehouse of Vertica, which can be installed on a customer's own cluster or any cluster on clouds such as Amazon AWS, MS Azure, and Google Cloud. Note that because this is a shared-nothing cluster, each node has to include both compute (CPU & RAM) and enough disk space for persistent data.
 
 [S] Snowflake offers _**Data Sharing**_ between different accounts<sup>(*20)</sup> that to my knowledge not available in Vertica at this time.
