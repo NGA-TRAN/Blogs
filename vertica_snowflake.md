@@ -70,7 +70,7 @@ Here are a few other differences of their internal implementations:
 * [S or V?] In an execution compute of many nodes, many times none-co-located data of a running query with joins and group-by needs to be redistributed between nodes in order to produce the right results. Snowflake lets its execution compute decide when to do that, while Vertica decides that at its planning time before sending it to the execution engine for running. Without knowing the detail of the implementation, it is hard to know which strategy works better.
 * [S or V?] The query plan was built in a _**bottom-up**_ fashion in Vertica but _**top-down**_ in Snowflake. They are well-known research techniques that have their own advantages.
 * [V] Snowflake uses _**push**_ strategy to pipeline data in a query plan. Vertica had implemented push technique at first but then converted to _**pull**_ strategy to get better performance and resource sharing.
-* [S or V?] Snowflake stores its metadata in a key-value store, FoundationDB. Vertica implements its own format and storage.
+* [S or V?] Snowflake stores its metadata in a key-value store, Foundation DB. Vertica implements its own format and storage.
 
 ## Afterward
 
