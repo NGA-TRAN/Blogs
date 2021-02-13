@@ -6,7 +6,7 @@
 
 This blog compares the two successful Databases, __Vertica__ and __Snowflake__, focusing on their major offers and internal implementations. The main comparisons are based on these technical materials, [Vertica](https://vldb.org/pvldb/vol5/p1790_andrewlamb_vldb2012.pdf), 
 [Vertica Eon](https://www.vertica.com/wp-content/uploads/2018/05/Vertica_EON_SIGMOD_Paper.pdf), [Vertica Eon Talk 2020](https://www.thecube.net/vertica-bigdata-2020/content/Videos/GGE42drgkAHfYoFbn), 
-and [Snowflake](https://pages.cs.wisc.edu/~remzi/Classes/739/Fall2018/Papers/p215-dageville-snowflake.pdf), [Snowflake Architecture Talk 2019](https://www.youtube.com/watch?v=dxrEHqMFUWI), [Snowflake Talk att CIDR 2021](https://www.youtube.com/watch?v=0K7h7WvC6D4) 
+and [Snowflake](https://pages.cs.wisc.edu/~remzi/Classes/739/Fall2018/Papers/p215-dageville-snowflake.pdf), [Snowflake Architecture Talk 2019](https://www.youtube.com/watch?v=dxrEHqMFUWI), [Snowflake Talk at CIDR 2021](https://www.youtube.com/watch?v=0K7h7WvC6D4) 
  but many other related ones will be mentioned or cited throughout the writing. The content of this blog is from my sole understanding of the materials and may miss some key designs. All feedback to [this contact](https://github.com/NGA-TRAN/Blogs/blob/main/README.md) is welcome and appreciated.
 
 *__In short, being a Distributed Cloud RDBMS<sup>(1)</sup> that is able to scale their compute up (use more powerful nodes) and out (add more nodes) while maintaining strong consistency and availability, Vertica's and Snowflake's offers are very unique in the market.__* Let us dig into the details.
