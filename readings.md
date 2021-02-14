@@ -2,7 +2,7 @@
 
 _Initial version: 2021/1/19_
 
-_Latest updated: 2021/1/23_
+_Latest updated: 2021/2/14_
 
 More useful readings will be added time to time
 
@@ -38,6 +38,9 @@ An architecture of a *DBaaS Distributed Cloud Data Warehouse* that enables the s
 
 ### [Vertica Optimizer](https://www.researchgate.net/profile/Nga_Tran6/publication/269306314_The_Vertica_Query_Optimizer_The_case_for_specialized_query_optimizers/links/55aeb17208aed9b7dcdda55f.pdf) -2014 - "The Vertica Query Optimizer: The Case for Specialized Query Optimizers"
 An in-depth architecture of Vertica *Query Optimizer* used for both On-Premise and Cloud (Eon) modes.
+
+### [Snowflake Optimizer](https://www.youtube.com/watch?v=CPWn1SZUZqE&feature=youtu.be) - 2020 - Snowflake Query Optimizer Talk at CMU
+An in-dept talk about the architecture of Snowflake Query Optimizer.
 
 ### [Vertica BDB](https://ieeexplore.ieee.org/document/6816725) - 2014 - "DBDesigner: A customizable physical design tool for Vertica Analytic Database"
 An in-depth architecture of Vertica *Table's Physical Storage Design* applied to both On-Premise and Cloud (Eon) modes.
