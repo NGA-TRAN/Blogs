@@ -22,7 +22,7 @@ A book that covers high-level designs of distributed systems, and, although it d
 
 * [CMU's Intro to Database System](https://www.youtube.com/playlist?list=PLSE8ODhjZXjbohkNBWQs_otTrBTrjyohi) - 2019 by Prof. Andy Pavlo
 
-* [CMU's Advanced Database Systems](https://www.youtube.com/playlist?list=PLSE8ODhjZXjasmrEd2_Yi1deeE360zv5O) - 2020 by Prof. Andy Pavlo
+* [CMU's Advanced Database Systems](https://15721.courses.cs.cmu.edu/spring2020/schedule.html) that links to all slides & [videos](https://www.youtube.com/playlist?list=PLSE8ODhjZXjasmrEd2_Yi1deeE360zv5O) - 2020 by Prof. Andy Pavlo
     * In-memory DBs & Comparisons of different transaction management schemes: [class 2](https://www.youtube.com/watch?v=a70jRWLjQFk&list=PLSE8ODhjZXjasmrEd2_Yi1deeE360zv5O&index=2)
     * MVCC (Multi-Version Concurrency Control)
         * [CMU's MVCC design](https://15721.courses.cs.cmu.edu/spring2019/papers/03-mvcc1/wu-vldb2017.pdf) on their Peloton DB: [class 3](https://www.youtube.com/watch?v=1Od_SuOQshM&list=PLSE8ODhjZXjasmrEd2_Yi1deeE360zv5O&index=3)
@@ -32,6 +32,10 @@ A book that covers high-level designs of distributed systems, and, although it d
     * OLTP Indexes
         * In-Memory T-Tree, Latch-Free Bw-Tree, B+Tree Optimistic Latching: [class 6](https://www.youtube.com/watch?v=asyvZHhpMOY&list=PLSE8ODhjZXjasmrEd2_Yi1deeE360zv5O&index=6)
         * Latches, B+Trees, Judy Array, ART, MassTree: [class 7](https://www.youtube.com/watch?v=N6rhECUjdaI&list=PLSE8ODhjZXjasmrEd2_Yi1deeE360zv5O&index=7)
+    * Data Type Presentation & Storage Models [class 8](https://www.youtube.com/watch?v=y6qFHu0YKMM&t=3692s), [slides](https://15721.courses.cs.cmu.edu/spring2017/slides/10-storage.pdf)
+        * Type Presentation & Layout: Numbers (fixed & variable precision numbers), Varchar & Blob (fixed & variable length), time, null
+        * Storage models: N-ary Storage Model (NSM) for row-store, Decomposition Storage Model (DSM) for column-store, and Hybrid Storage Model 
+        * Hybrid workloads: [Casper](https://dl.acm.org/doi/pdf/10.14778/3358701.3358707?casa_token=zJVMHwuD6LQAAAAA:RdB_xUnAfrcFnnK4PTN1PFm0M3ZOJXQ0jUa3vhzy0t7DAWcF_Tntk9J_LGOKmfpRE47qBDDBohmqkA), [Peloton](https://15721.courses.cs.cmu.edu/spring2020/papers/08-storage/arulraj-sigmod2016.pdf), [H2O](https://15721.courses.cs.cmu.edu/spring2020/papers/08-storage/h2o.pdf), [HYRISE](https://15721.courses.cs.cmu.edu/spring2020/papers/08-storage/p105-grund.pdf), [Column-Stores vs Row-stores](https://15721.courses.cs.cmu.edu/spring2020/papers/08-storage/p967-abadi.pdf)
 
 ## Designs of Commercial Databases
 
