@@ -4,7 +4,7 @@
 
 ## Introduction
 
-This blog compares the two successful Databases, __Vertica__ and __Snowflake__, focusing on their major offers and internal implementations. The main comparisons are based on these technical materials, [Vertica](https://vldb.org/pvldb/vol5/p1790_andrewlamb_vldb2012.pdf), 
+This post compares the two successful Databases, __Vertica__ and __Snowflake__, focusing on their major offerings and internal implementations. The main comparisons are based on these technical materials, [Vertica](https://vldb.org/pvldb/vol5/p1790_andrewlamb_vldb2012.pdf), 
 [Vertica Eon](https://www.vertica.com/wp-content/uploads/2018/05/Vertica_EON_SIGMOD_Paper.pdf), [Vertica Eon Talk 2020](https://www.thecube.net/vertica-bigdata-2020/content/Videos/GGE42drgkAHfYoFbn), 
 and [Snowflake](https://pages.cs.wisc.edu/~remzi/Classes/739/Fall2018/Papers/p215-dageville-snowflake.pdf), [Snowflake Architecture Talk 2019](https://www.youtube.com/watch?v=dxrEHqMFUWI), [Snowflake Talk at CIDR 2021](https://www.youtube.com/watch?v=0K7h7WvC6D4)  but many other related ones will be mentioned or cited throughout the writing. The content of this blog is from my sole understanding of the materials and may miss some key designs. All feedback to [this contact](https://github.com/NGA-TRAN/Blogs/blob/main/README.md) is welcome and appreciated.
 
@@ -22,7 +22,7 @@ Both companies see the popularity of _semi-structured_ data (e.g. JSON, XML, and
 
 As Cloud DB providers, they continue building and improving their data _security_ features such as authentication, authorization, and encryption in flight and at rest <sup>(*5) and ($1)</sup>.
 
-The ecosystems of both databases are very diverse including integration with Kafka for data streaming <sup>(*6)</sup>, Spark connector for bringing data between their databases and Spark ecosystem <sup>(*7)</sup>, SDKs for different programming languages <sup>(*8)</sup>, driver connectors <sup>(*9)</sup>, and BI integration <sup>(*10)</sup>. I will not dive into their details but these two talks of [Snowflake's Best Practice for Data Engineers](https://www.youtube.com/watch?v=E--zIGd_iqE&feature=youtu.be) and [Vertica's Coolest Features](https://www.youtube.com/watch?v=ezD5we-cens&feature=emb_logo) well summarize those offers.
+The ecosystems of both databases are very diverse including integration with Kafka for data streaming <sup>(*6)</sup>, Spark connector for bringing data between their databases and Spark ecosystem <sup>(*7)</sup>, SDKs for different programming languages <sup>(*8)</sup>, driver connectors <sup>(*9)</sup>, and BI integration <sup>(*10)</sup>. I will not dive into their details but these two talks of [Snowflake's Best Practice for Data Engineers](https://www.youtube.com/watch?v=E--zIGd_iqE&feature=youtu.be) and [Vertica's Coolest Features](https://www.youtube.com/watch?v=ezD5we-cens&feature=emb_logo) well summarize those offerings.
 
 Here are a few key technologies of their internal implementations:
 * ACID transactions are handled via snapshot isolation and MVCC (multi-version concurrency control) in which queries in a transaction only see a snapshot of immutable files of data at the time the transaction started and a copy of every change of metadata or data is preserved for some duration after their commit.
@@ -61,7 +61,7 @@ Compute is a key component of the cloud DB architecture and both Snowflake and V
 
 [V] As mentioned earlier, Snowflake offers single mode which is a pure Cloud DB implementing the major technology of separation of storage and compute. Its cloud providers include Amazon AWS, MS Azure, and Google Cloud. Vertica, on the other hand, offers three different DB modes:
 1. _**Vertica Eon mode on Cloud**_: this offer is mostly like Snowflake's and the comparisons so far with Snowflake are on this mode. At the time of this writing, this mode works on Amazon AWS and Google Cloud Platform GCP.
-2. _**Vertica Eon mode On-Premise**_: This mode also offers the separation of storage and compute technology like the one above but its compute and storage do not have to be on public clouds. The compute can be any cluster customers choose and the storage can be either Pure Storage FlashBlade, MiIO, and HDFS<sup>(*19)</sup>.
+2. _**Vertica Eon mode On-Premise**_: This mode also offers the separation of storage and compute technology like the one above but its compute and storage do not have to be on public clouds. The compute can be any cluster customers choose and the storage can be either Pure Storage FlashBlade, MinIO, and HDFS<sup>(*19)</sup>.
 3. _**Vertica On-Premise**_: This is the original Shared-Nothing Distributed Data Warehouse of Vertica, which can be installed on a customer's own cluster or any cluster on clouds such as Amazon AWS, MS Azure, and Google Cloud. Note that because this is a shared-nothing cluster, each node has to include both compute (CPU & RAM) and enough disk space for persistent data.
 
 [S] Collaboration between different accounts is one of the key offers of Snowflake conveyed by its  feature, _**Secure Database Sharing**_, through a producer-consumers model without copying data. The producer creates DB Sharing Metadata that includes which to share and who can consume them. Then consumers create corresponding metadata to let Snowflake know they want to access the sharable ones. When the protocol is established, the consumers can access and join the shared data with their own. To my knowledge, this feature is not available in Vertica at this time.
@@ -87,7 +87,7 @@ Here are a few other differences of their internal implementations:
    * [V] Vertica has a robust monitoring schema for every profile detail.
    * Similarly, I would suggest combining the two above to display profile information in an easy-to-read and navigation way.
 
-* [S or V?] A well-known issue of any query optimizer is that its optimal-generated plan is sometimes far from optimal. It seems Snowflake provides a drag-and-drop way in their WebUI to reconstruct a bad customer query plan for diagnosing for which I have not found any related documentation or demos yet. Vertica provides a _**Directed Query**_ feature<sup>(*24)</sup> that enables one to fully rebuild the details of any query plans to not only offer customers to retain their query plans after upgrading if preferred but also build their own plans. Although I cannot compare the two because of missing Snowflake information, I would suggest Vertica to provide UI for their luxuriant Directed Query. Note that this feature is here to enrich their offers and usability as needed. I believe both Snowflake and Vertica do not recommend their customers to build their own query plans but use the ones generated by their query optimizer instead.
+* [S or V?] A well-known issue of any query optimizer is that its optimal-generated plan is sometimes far from optimal. It seems Snowflake provides a drag-and-drop way in their WebUI to reconstruct a bad customer query plan for diagnosing for which I have not found any related documentation or demos yet. Vertica provides a _**Directed Query**_ feature<sup>(*24)</sup> that enables one to fully rebuild the details of any query plans to not only offer customers to retain their query plans after upgrading if preferred but also build their own plans. Although I cannot compare the two because of missing Snowflake information, I would suggest Vertica to provide UI for their luxuriant Directed Query. Note that this feature is here to enrich their offerings and usability as needed. I believe both Snowflake and Vertica do not recommend their customers to build their own query plans but use the ones generated by their query optimizer instead.
 
 * [S or V?] The query plan was built in a _**bottom-up**_ fashion in Vertica but _**top-down**_ in Snowflake. They are well-known research techniques that have their own advantages.
 * [V] Snowflake uses _**push**_ strategy to pipeline data in a query plan. Vertica had implemented push technique at first but then converted to _**pull**_ strategy to get better performance and resource sharing.
@@ -97,9 +97,9 @@ Here are a few other differences of their internal implementations:
 ## Rumors
 
 As a technical person, my intention of this writing is to focus only on their offerings and internal implementations. However, many readers have asked for comparisons of cost, pricing, and performance per dollars-spent. I have not spent much time on this regard but I have heard from a lot of reliable sources that Vertica out-performs Snowflake given equivalent amounts of Compute and that, for a given solution, Snowflake turns out to be far more expensive. However, Snowflake is much easier to get started with and far more turn-key with less need for on-site expertise. I would encourage you to do more research for yourself on these topics, and even do POCs with both Snowflake and Vertica on your specific workloads and get the exact quotes.
-## Afterward
+## Afterword
 
-Now that you know the two DBs' similarities and differences, if you are a customer who is searching for a Cloud DB, which one would best fit your needs? If you are a DB builder, which technologies and offers will you pick for your new DB designs?
+Now that you know the two DBs' similarities and differences, if you are a customer who is searching for a Cloud DB, which one would best fit your needs? If you are a DB builder, which technologies and offerings will you pick for your new DB designs?
 
 ## Footnotes & References
 
