@@ -1,5 +1,5 @@
 # Posted
-* Scaling throughput and performance in a sharding database system: Understand the two dimensions of scaling for database query and ingest workloads, and how sharding can make scaling elastic—or not [publised in InfoWorld](https://www.infoworld.com/article/3656915/scaling-throughput-and-performance-in-a-sharding-database-system.html) or its [original pdf verson](https://github.com/NGA-TRAN/Blogs/blob/main/Scaling%20thorughput%20and%20performance%20in%20a%20sharidng%20DB.pdf)
+* Scaling throughput and performance in a sharding database system: Understand the two dimensions of scaling for database query and ingest workloads, and how sharding can make scaling elastic—or not [publised in InfoWorld](https://www.infoworld.com/article/3656915/scaling-throughput-and-performance-in-a-sharding-database-system.html) or its [original pdf verson](https://github.com/NGA-TRAN/Blogs/blob/main/scaling_throughput_and_performance_in_a_sharidng_DB.pdf)
 * [Distributed Cloud Columnar Databases: Vertica Eon vs Snowflake](https://github.com/NGA-TRAN/Blogs/blob/main/vertica_snowflake.md)
 * [Reading Materials for Building Distributed (Cloud) Databases](https://github.com/NGA-TRAN/Blogs/blob/main/readings.md)
 # To be written
