@@ -3,3 +3,7 @@ Nga Tran is a staff software engineer at InfluxData, and a member of the InfluxD
 
 * [Nga's linkedin](https://www.linkedin.com/in/nga-tran-0641183/)
 * [Nga's Profile at InfluxData](https://www.influxdata.com/blog/author/nga-tran/)
+
+## Opensource projects
+* [InfluxDB IOx](https://github.com/influxdata/influxdb_iox)
+* [Apache Arrow DataFusion](https://github.com/apache/arrow-datafusion)
