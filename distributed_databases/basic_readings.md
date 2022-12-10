@@ -1,9 +1,5 @@
 # Reading Materials for Building Distributed (Cloud) Databases
 
-_Initial version: 2021/1/19_
-
-_Latest updated: 2021/3/6_
-
 More useful readings will be added time to time
 
 --------------------------------------

@@ -1,0 +1,9 @@
+# High-Level Designs of Various Databases
+
+* [CStore](https://web.archive.org/web/20100619191833/http://db.lcs.mit.edu/projects/cstore/vldb.pf) - 2005 - "C-Store: A Column-oriented DBMS": A research paper that covers a full architecture of a *Distributed Share-nothing Columnar MPP* that fully support ACID.
+
+* [Vertica](https://vldb.org/pvldb/vol5/p1790_andrewlamb_vldb2012.pdf) - 2012 - "The Vertica Analytic Database: C-Store 7 Years Later": A full architecture of a high performance *On-premise Distributed Data Warehouse* implementing CStore research ideas.
+
+* [Vertica Eon](https://www.vertica.com/wp-content/uploads/2018/05/Vertica_EON_SIGMOD_Paper.pdf) - 2018 - "Eon Mode: Bringing the Vertica Columnar Database to the Cloud" & its related talks: [Vertica Eon 2020](https://www.thecube.net/vertica-bigdata-2020/content/Videos/GGE42drgkAHfYoFbn): An architecture of a *Distributed Cloud Data Warehouse* that enables the separation of compute and storage and fully supports ACID and fault tolerance. Vertica is famous for its high query performance and throughput.
+
+* [Snowflake](http://pages.cs.wisc.edu/~remzi/Classes/739/Fall2018/Papers/p215-dageville-snowflake.pdf) - 2016 - "The Snowflake Elastic Data Warehouse" and its related talks: [Snowflake CIDR 2021](https://www.youtube.com/watch?v=0K7h7WvC6D4), [Snowflake Architecture 2019](https://www.youtube.com/watch?v=dxrEHqMFUWI): An architecture of a *DBaaS Distributed Cloud Data Warehouse* that enables the separation of compute and storage, and fully supports ACID and fault tolerance. Snowflake is famous for its DBaaS (DB as a Service) and ease of use.
