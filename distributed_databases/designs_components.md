@@ -12,7 +12,7 @@ An in-depth architecture of Vertica *Table's Physical Storage Design* applied to
 * [SIPS](https://15721.courses.cs.cmu.edu/spring2019/papers/15-execution/shrinivas-icde2013.pdf) - 2013 - "Materialization Strategies in the Vertica Analytic Database: Lessons Learned"
 In-depth strategies of *data materialization for joins* of columnar DB.
 
-* [Vertica Materialized View](https://github.com/NGA-TRAN/Notes/blob/main/Papers/FlattenedTable_LiveAggregateProjecttions.pdf) - ICDE 2019 - 2019 - "Vertica Flattened Tables and Live Aggregate Projections: A Column-based Alternative to Materialized Views for Analytics"
+* [Vertica Materialized View](https://github.com/NGA-TRAN/Notes/blob/main/Papers/FlattenedTable_LiveAggregateProjecttions.pdf) - 2019 - "Vertica Flattened Tables and Live Aggregate Projections: A Column-based Alternative to Materialized Views for Analytics"
 Designs of two different materialized views, *flattening and aggregation*, that are easy to use and, when combined, provide complete materialized views.
 
 * [Sharding](https://www.infoworld.com/article/3656915/scaling-throughput-and-performance-in-a-sharding-database-system.html) - 2022 - "Scaling throughput and performance in a sharding database system"
@@ -27,6 +27,8 @@ Learning pusdown techniques for better query perfornance.
 * Multi-Column Sorts: [Part 1](https://arrow.apache.org/blog/2022/11/07/multi-column-sorts-in-arrow-rust-part-1/) and [Part 2](https://arrow.apache.org/blog/2022/11/07/multi-column-sorts-in-arrow-rust-part-2/) - 2022 - "Fast and Memory Efficient Multi-Column Sorts in Apache Arrow Rust"
 Learning low-level techniques for building fast multi-column sorts
 
-* **Deduplication**: Coming soon
+* [Deduplication](https://www.infoworld.com/article/3683915/using-deduplication-for-eventually-consistent-transactions.html): - 2023 - "Using deduplication for eventually consistent transactions"
+Exploring an effective alternative to transactions for eventually consistent use cases of a distributed database
   
-* **Compaction**: Coming soon
+* [Compaction](https://www.infoworld.com/article/3685496/compactor-a-hidden-engine-of-database-performance.html) - 2023 - "Compactor: A hidden engine of database performance"
+Understanding a DB Engine, compactor, that handles critical post-ingestion and pre-query workloads in the background on a separate server, enabling low latency for data ingestion and high performance for queries
