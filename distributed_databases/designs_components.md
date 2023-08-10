@@ -32,3 +32,5 @@ Exploring an effective alternative to transactions for eventually consistent use
   
 * [Compaction](https://www.infoworld.com/article/3685496/compactor-a-hidden-engine-of-database-performance.html) - 2023 - "Compactor: A hidden engine of database performance"
 Understanding a DB Engine, compactor, that handles critical post-ingestion and pre-query workloads in the background on a separate server, enabling low latency for data ingestion and high performance for queries
+
+* [Grouping](https://www.influxdata.com/blog/aggregating-millions-groups-fast-apache-arrow-datafusion/) - 2023 - Understanding how to implement two phase parallel partitioned grouping for high cadinarlity data
