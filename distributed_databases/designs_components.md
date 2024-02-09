@@ -20,6 +20,8 @@ Understanding the two dimensions of scaling for database query and ingest worklo
   
 * [Partitioning](https://www.infoworld.com/article/3666513/partitioning-for-performance-in-a-sharding-database-system.html) - 2022 - "Partitioning for performance in a sharding database system"
 Understanding partitioning effects and techniques for your choice of partitioning your data.
+
+ * [Other partitioning schemes](https://www.influxdata.com/blog/partitioning-data-query-performance-influxdb-3/): 2024 - "Partitioning data for Query Performance in InfluxDB 3.0" Understanding partitioning schemes in InfluxDB 3.0
       
 * [Projection & Predicate Pushdown](https://www.influxdata.com/blog/querying-parquet-millisecond-latency/) - 2022 - "Querying Parquet with Millisecond Latency"
 Learning pusdown techniques for better query perfornance.
@@ -34,3 +36,6 @@ Exploring an effective alternative to transactions for eventually consistent use
 Understanding a DB Engine, compactor, that handles critical post-ingestion and pre-query workloads in the background on a separate server, enabling low latency for data ingestion and high performance for queries
 
 * [Grouping](https://www.influxdata.com/blog/aggregating-millions-groups-fast-apache-arrow-datafusion/) - 2023 - Understanding how to implement two phase parallel partitioned grouping for high cadinarlity data
+
+* [Query Plan](https://www.influxdata.com/blog/how-read-influxdb-3-query-plans/) - 2024 - "How to read InfluxDb 3.0 (and DataFusion) Query Plans" Understanding how to read a Database query plan
+
