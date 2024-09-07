@@ -19,7 +19,9 @@
   * *Compactor: A hidden engine of database performance* [published in InfoWorld in Jan 2023](https://www.infoworld.com/article/3685496/compactor-a-hidden-engine-of-database-performance.html) or its [original pdf](compactor.pdf)
   * [Specific implementation of Compaction in InfluxDB IOx](https://github.com/influxdata/influxdb_iox/blob/main/docs/compactor.md)
 
-* **Query Plans**: *How to read InfluxDb 3.0 (and DataFusion) Query Plans* [published by InfluxData in January 2024](https://www.influxdata.com/blog/how-read-influxdb-3-query-plans/) or its [original pdf](influxdb_3.0_query_plans.pdf)
+* **Query Plans**:
+  * *How to read InfluxDb 3.0 (and DataFusion) Query Plans* [published by InfluxData in January 2024](https://www.influxdata.com/blog/how-read-influxdb-3-query-plans/) or its [original pdf](influxdb_3.0_query_plans.pdf)
+  * *Making Most Recent Value Queries Hundreds of Times Faster* [published by InfluxData in March 2024](https://www.influxdata.com/blog/making-recent-value-queries-hundreds-times-faster/) or its [original pdf](most_recent_query.pdf)
     
 * **Projection & Predicate Pushdown**: [Querying Parquet with Millisecond Latency](https://www.influxdata.com/blog/querying-parquet-millisecond-latency/) - December 2022
   

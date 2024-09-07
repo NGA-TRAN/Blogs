@@ -39,3 +39,5 @@ Understanding a DB Engine, compactor, that handles critical post-ingestion and p
 
 * [Query Plan](https://www.influxdata.com/blog/how-read-influxdb-3-query-plans/) - 2024 - "How to read InfluxDb 3.0 (and DataFusion) Query Plans" Understanding how to read a Database query plan
 
+* [Query Plan Improvment - most recent values](https://www.influxdata.com/blog/making-recent-value-queries-hundreds-times-faster/) - 2024 - "Making Most Recent Value Queries Hundreds of Times Faster" Understanding how to modify a query plan to make it faster for the case of most recent values
+
