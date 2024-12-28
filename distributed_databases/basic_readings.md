@@ -10,6 +10,7 @@ These are classes, papers, journals or books written by DB researchers and build
 ## Basic Distributed System Readings
 * [System Design](https://www.amazon.com/System-Design-Interview-Insiders-Guide-ebook/dp/B08B3FWYBX) - 2020 - "System Design Interview - An Insider's Guide" by Alex Xu
 A book that covers high-level designs of distributed systems, and, although it does not focus on DB, it introduces challenges all DB builders want to solve and relevant technologies used to do solve them. I highly recommend you to read at least the first half of this book in the order the chapters are laid out before reading the following materials.
+* [System Design 2](https://www.amazon.com/System-Design-Interview-Insiders-Guide-ebook/dp/B0CR977BQH/) - 2022 - "System Design Interview – An Insider's Guide: Volume 2" by Alex Xu & Sahn Lam
 
 ## Classes
 
