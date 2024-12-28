@@ -12,7 +12,7 @@ An in-depth architecture of Vertica *Table's Physical Storage Design* applied to
 * [SIPS](https://15721.courses.cs.cmu.edu/spring2019/papers/15-execution/shrinivas-icde2013.pdf) - 2013 - "Materialization Strategies in the Vertica Analytic Database: Lessons Learned"
 In-depth strategies of *data materialization for joins* of columnar DB.
 
-* [Vertica Materialized View](https://github.com/NGA-TRAN/Notes/blob/main/Papers/FlattenedTable_LiveAggregateProjecttions.pdf) - 2019 - "Vertica Flattened Tables and Live Aggregate Projections: A Column-based Alternative to Materialized Views for Analytics"
+* [Vertica Materialized View](FlattenedTable_LiveAggregateProjecttions.pdf) - 2019 - "Vertica Flattened Tables and Live Aggregate Projections: A Column-based Alternative to Materialized Views for Analytics"
 Designs of two different materialized views, *flattening and aggregation*, that are easy to use and, when combined, provide complete materialized views.
 
 * [Sharding](https://www.infoworld.com/article/3656915/scaling-throughput-and-performance-in-a-sharding-database-system.html) - 2022 - "Scaling throughput and performance in a sharding database system"
@@ -35,9 +35,20 @@ Exploring an effective alternative to transactions for eventually consistent use
 * [Compaction](https://www.infoworld.com/article/3685496/compactor-a-hidden-engine-of-database-performance.html) - 2023 - "Compactor: A hidden engine of database performance"
 Understanding a DB Engine, compactor, that handles critical post-ingestion and pre-query workloads in the background on a separate server, enabling low latency for data ingestion and high performance for queries
 
+* [Groupby Pushdown](groupby_in_query_optimization.pdf) - 1994 - Group-by pushdown techniques
+
 * [Grouping](https://www.influxdata.com/blog/aggregating-millions-groups-fast-apache-arrow-datafusion/) - 2023 - Understanding how to implement two phase parallel partitioned grouping for high cadinarlity data
+
+* [Outer join simplification & reordering](Outerjoin-Simplification-and-Reordering-for-Query-Optimization.pdf) - 1997
+
+*[Sampling and Cardinality Estimation](Sampling-Based_Estimation_of_the_Number_of_Distinct_Values_of_an_Attribute.PDF)
 
 * [Query Plan](https://www.influxdata.com/blog/how-read-influxdb-3-query-plans/) - 2024 - "How to read InfluxDb 3.0 (and DataFusion) Query Plans" Understanding how to read a Database query plan
 
 * [Query Plan Improvment - most recent values](https://www.influxdata.com/blog/making-recent-value-queries-hundreds-times-faster/) - 2024 - "Making Most Recent Value Queries Hundreds of Times Faster" Understanding how to modify a query plan to make it faster for the case of most recent values
 
+* [Parquet for Wide Tables?](https://www.influxdata.com/blog/how-good-parquet-wide-tables/) - 2024 - " Quantifying the metadata overhead of Apache Parquet files for storing thousands of columns"
+
+* [Using StringView/ Germa Style Strings](https://www.influxdata.com/blog/faster-queries-with-stringview-part-one-influxdb/) and [its part 2](https://www.influxdata.com/blog/faster-queries-with-stringview-part-two-influxdb/) - 2024 - "Experience implementing StringView" 
+
+* [FSST: Fast Random AccessString Compression](https://www.vldb.org/pvldb/vol13/p2649-boncz.pdf) - 2020 - "A lightweight compression scheme for strings"

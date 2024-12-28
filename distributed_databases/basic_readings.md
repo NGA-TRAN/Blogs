@@ -31,7 +31,31 @@ A book that covers high-level designs of distributed systems, and, although it d
         * Hybrid workloads: [Casper](https://dl.acm.org/doi/pdf/10.14778/3358701.3358707?casa_token=zJVMHwuD6LQAAAAA:RdB_xUnAfrcFnnK4PTN1PFm0M3ZOJXQ0jUa3vhzy0t7DAWcF_Tntk9J_LGOKmfpRE47qBDDBohmqkA), [Peloton](https://15721.courses.cs.cmu.edu/spring2020/papers/08-storage/arulraj-sigmod2016.pdf), [H2O](https://15721.courses.cs.cmu.edu/spring2020/papers/08-storage/h2o.pdf), [HYRISE](https://15721.courses.cs.cmu.edu/spring2020/papers/08-storage/p105-grund.pdf), [Column-Stores vs Row-stores](https://15721.courses.cs.cmu.edu/spring2020/papers/08-storage/p967-abadi.pdf)
 
     More to come: details of other classes
-
+* [MIT 6.2824 Distributed System](http://nil.csail.mit.edu/6.824/2020/) and [videos](https://www.youtube.com/@6.824) - 2020 by Prof. Robert Morris
+   - MapReduce
+   - GFS
+   - Fault Tolerence: Raft & Zookeeper
+      - Raft: leader & replicas with majority-vote strategy, 2-face locking
+   - Cloud Replicated Aurora DB: 6 replicas on 3 data centers
+   - Cache Consistency: Frangipani
+   - Distributed Transactions: 2-face commit
+   - Spanner
+     - Uses Paxos (replicas without leader) with 2-face locking
+     - 2-face commit for writes (the Pasox replicas & 2-face locking helps avoid network issue & waiting forever during 2-face commit)
+     - Snapshot isolation for reads
+     - Use Synchronized clocks 
+   - Optimistic Concurrency Control vs Pessimistic Conurrency Control
+     - Pessimistic: Lock involved items to guarantee serial transaction
+     - Optimistic: No locking but at commit time check version/epoch and cancel the transaction if it was changed
+   - Big Data: Spark (~second generation of map reduce) 
+     - Partition data and build a plan (DAG) on each partition. 
+     - The plan can merge/re-distribute/broadcast data from different partitions --> save before data redistribution to reuse at recovery as needed
+   - Cache Conconsitency: Memcached at FB
+   - Causal Concsistency & COPS
+   - Fork Consistency
+   - Certificate Transparency
+   - Bitcoin
+   - Blockstack
 ## References
 
 * [Designing Data-Intensive Applications](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321) - 2017 by Martin Kleppmann
