@@ -57,6 +57,9 @@ A book that covers high-level designs of distributed systems, and, although it d
    - Certificate Transparency
    - Bitcoin
    - Blockstack
+
+* [CMU's Query Optimizer](https://15799.courses.cs.cmu.edu/spring2025/) - 2025 by Prof. Andy Pavlo  with [slides](https://15799.courses.cs.cmu.edu/spring2025/schedule.html) and [videos](https://www.youtube.com/playlist?list=PLSE8ODhjZXjYCZfIbmEWH7f6MnYqyPwCE)
+
 ## References
 
 * [Designing Data-Intensive Applications](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321) - 2017 by Martin Kleppmann
